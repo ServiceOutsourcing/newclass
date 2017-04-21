@@ -13,14 +13,10 @@
 <body>
     <p>HelloWorld!</p>
 
-\
+
     <div>
 
-        <form action="${rootPath}/index" method="get">
-
-            <input type="submit" value="res">
-
-        </form>
+        <h1>Welcome</h1>
 
     </div>
 </body>
