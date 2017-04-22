@@ -34,4 +34,12 @@ public class UserDao extends BaseDao {
         user.setPassword(password);
         save(user);
     }
+
+
+    public List<UserEntity> getAllEntities(){
+        String hql = "from UserEntity";
+        Query query = query(hql);
+        return query.list();
+    }
+
 }
