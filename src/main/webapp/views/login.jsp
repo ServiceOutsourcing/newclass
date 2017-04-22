@@ -7,7 +7,6 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
-<script src="${assetsPath}/js/login.js"></script>
 <head>
     <meta charset="UTF-8">
     <title>Welcome</title>
@@ -19,10 +18,8 @@
         <h2 class="form-signin-heading">Pelase login</h2>
         <input type="text" class="form-control" name="username" id="username" placeholder="账号" required="" autofocus="" />
         <input type="password" class="form-control" name="password" id="password" placeholder="密码" required=""/>
-        <p></p>
-        <button class="btn" type="submit">Login</button>
-        <%--<input type="submit" >--%>
-
+        <p><a href="${rootPath}/views/register.jsp">注册账号</a></p>
+        <button class="btn" type="submit" >Login</button>
     </form>
 </div>
 </body>
