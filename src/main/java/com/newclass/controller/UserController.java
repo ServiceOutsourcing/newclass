@@ -8,6 +8,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import javax.servlet.http.HttpSession;
+import java.util.List;
+
 /**
  * Created by liujiawang on 2017/4/15.
  */
@@ -31,10 +34,26 @@ public class UserController {
         }
     }
 
-    @RequestMapping(value ="/register", method = RequestMethod.POST)
-    public String register(String username, String password1){
+    @RequestMapping(value ="/register", method = RequestMethod.GET)
+    public String register(){
+        return "register";
+    }
 
-        userDao.insertUser(username,password1);
+    @RequestMapping(value ="/register", method = RequestMethod.POST)
+    public String register(String username , String password , String password1 , HttpSession session){
+
+        if(username==null || username.equals("")){
+            session.setAttribute("message","用户名为空");
+            return "redirect:/user/register";
+        }
+
+        UserEntity userEntity = userDao.getByUserName(username);
+
+        if(userEntity != null){
+
+        }
+
+
         return "index";
     }
 
