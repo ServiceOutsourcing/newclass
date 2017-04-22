@@ -9,26 +9,34 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
- * Created by sl on 2017/4/15.
+ * Created by liujiawang on 2017/4/15.
  */
 @Controller
 @RequestMapping("/user")
 public class UserController {
 
-
     @Autowired
     @Qualifier("userDao")
     private UserDao userDao;
 
-    @RequestMapping(value = "/login" , method = RequestMethod.POST)
-    public String login(String username , String password){
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    public String login(String username, String password){
 
         UserEntity user = userDao.getByUserName(username);
 
-        if(password.equals(user.getPassword()))
+        if(password.equals(user.getPassword())){
             return "index";
-        else
+        }else{
             return "login";
+        }
     }
+
+    @RequestMapping(value ="/register", method = RequestMethod.POST)
+    public String register(String username, String password1){
+
+        userDao.insertUser(username,password1);
+        return "index";
+    }
+
 
 }
