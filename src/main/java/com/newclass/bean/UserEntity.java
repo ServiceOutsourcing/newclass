@@ -3,15 +3,14 @@ package com.newclass.bean;
 import javax.persistence.*;
 
 /**
- * Created by liujiawang on 2017/4/15.
+ * Created by sl on 2017/4/15.
  */
 @Entity
 @Table(name = "user", schema = "db_newclass", catalog = "")
 public class UserEntity {
     private int id;
-    private String password;
     private String username;
-
+    private String password;
     @Id
     @Column(name = "id")
     public int getId() {
@@ -20,6 +19,16 @@ public class UserEntity {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    @Basic
+    @Column(name = "username")
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     @Basic
@@ -32,15 +41,6 @@ public class UserEntity {
         this.password = password;
     }
 
-    @Basic
-    @Column(name = "username")
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
 
     @Override
     public boolean equals(Object o) {

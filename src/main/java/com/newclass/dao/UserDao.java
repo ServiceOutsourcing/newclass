@@ -7,14 +7,15 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 /**
- * Created by liujiawang on 2017/4/15.
+ * Created by sl on 2017/4/15.
  */
 @Repository("userDao")
-public class UserDao extends BaseDao{
+public class UserDao extends BaseDao {
 
     public UserEntity getById(int id){
         return get(UserEntity.class,id);
     }
+
 
     public UserEntity getByUserName(String UserName){
         String hql = "from UserEntity as user where user.username=?";

@@ -20,7 +20,6 @@
         <input type="password" class="form-control" name="password" id="password" placeholder="密码" required=""/>
         <p><a href="${rootPath}/views/register.jsp">注册账号</a></p>
         <button class="btn" type="submit" >Login</button>
-
     </form>
 </div>
 </body>
