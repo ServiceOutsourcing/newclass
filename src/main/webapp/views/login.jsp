@@ -15,12 +15,13 @@
 </head>
 <body>
 <div class="wrapper">
-    <form class="form-signin">
+    <form class="form-signin" action="${rootPath}/user/login" method="post">
         <h2 class="form-signin-heading">Pelase login</h2>
         <input type="text" class="form-control" name="username" id="username" placeholder="账号" required="" autofocus="" />
         <input type="password" class="form-control" name="password" id="password" placeholder="密码" required=""/>
         <p></p>
-        <button class="btn" type="submit" onclick="finish()">Login</button>
+        <button class="btn" type="submit">Login</button>
+        <%--<input type="submit" >--%>
 
     </form>
 </div>

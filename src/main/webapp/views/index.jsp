@@ -16,11 +16,7 @@
 \
     <div>
 
-        <form action="${rootPath}/index" method="get">
-
-            <input type="submit" value="res">
-
-        </form>
+        <p1>登录成功！！！</p1>
 
     </div>
 </body>
