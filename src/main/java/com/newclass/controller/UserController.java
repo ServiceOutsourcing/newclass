@@ -22,15 +22,25 @@ public class UserController {
     @Qualifier("userDao")
     private UserDao userDao;
 
+    @RequestMapping(value ="/login", method = RequestMethod.GET)
+    public String login(){
+        return "login";
+    }
+
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public String login(String username, String password){
-
-        UserEntity user = userDao.getByUserName(username);
-
-        if(password.equals(user.getPassword())){
-            return "index";
-        }else{
-            return "login";
+    public String login(String username, String password , HttpSession session){
+        try {
+            List<UserEntity> users = userDao.getByUserName(username);
+            UserEntity user = users.get(0);
+            if (password.equals(user.getPassword())) {
+                return "index";
+            } else {
+                session.setAttribute("message","密码错误");
+                return "redirect:/user/login";
+            }
+        }catch (Exception e){
+            session.setAttribute("message","该账号不存在");
+            return "redirect:/user/login";
         }
     }
 
@@ -46,14 +56,18 @@ public class UserController {
             session.setAttribute("message","用户名为空");
             return "redirect:/user/register";
         }
-
-        UserEntity userEntity = userDao.getByUserName(username);
-
-        if(userEntity != null){
-
+        try{
+            List<UserEntity> users = userDao.getByUserName(username);
+            UserEntity user = users.get(0);
+            session.setAttribute("message","用户名已存在");
+            return "redirect:/user/register";
+        }catch (Exception e){
         }
-
-
+        if(!password.equals(password1)){
+            session.setAttribute("message","两次密码不一致");
+            return "redirect:/user/register";
+        }
+        userDao.insertUser(username,password);
         return "index";
     }
 

@@ -18,6 +18,9 @@
         <h2 class="form-signin-heading">Pelase login</h2>
         <input type="text" class="form-control" name="username" id="username" placeholder="账号" required="" autofocus="" />
         <input type="password" class="form-control" name="password" id="password" placeholder="密码" required=""/>
+        <c:if test="${message!=null}">
+            <p>${message}</p>
+        </c:if>
         <p><a href="${rootPath}/user/register">注册账号</a></p>
         <button class="btn" type="submit" >Login</button>
     </form>

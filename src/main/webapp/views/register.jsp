@@ -21,8 +21,8 @@
     <form class="form-signin" action="${rootPath}/user/register" method="post" >
         <h2 class="form-signin-heading">注册账号</h2>
         <input type="text" class="form-control" name="username" id="username" placeholder="请输入账号" />
-        <input type="password" class="form-control" name="password" id="password1" placeholder="请输入密码" />
-        <input type="password" class="form-control" name="password1" id="password2" placeholder="确认密码" />
+        <input type="password" class="form-control" name="password" id="password" placeholder="请输入密码" />
+        <input type="password" class="form-control" name="password1" id="password1" placeholder="确认密码" />
         <c:if test="${message!=null}">
             <p>${message}</p>
         </c:if>

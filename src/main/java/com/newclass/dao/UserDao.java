@@ -17,15 +17,12 @@ public class UserDao extends BaseDao {
     }
 
 
-    public UserEntity getByUserName(String UserName){
+    public List<UserEntity> getByUserName(String UserName){
         String hql = "from UserEntity as user where user.username=?";
         Query query = query(hql);
         query.setString(0,UserName);
         List<UserEntity> users = query.list();
-        if(users!=null)
-            return users.get(0);
-        else
-            return null;
+        return users;
     }
 
     public void insertUser(String UserName,String password){
