@@ -14,7 +14,7 @@ public class IndexController {
 
     @RequestMapping(value = "/index", method = RequestMethod.GET)
     public String index() {
-        return "login";
+        return "index";
     }
 
 
@@ -28,6 +28,11 @@ public class IndexController {
 
 
         return "login";
+    }
+
+    @RequestMapping(value = "/home" , method = RequestMethod.GET)
+    public String home(){
+        return "home";
     }
 
 
