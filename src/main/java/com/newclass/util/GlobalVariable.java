@@ -16,6 +16,7 @@ public class GlobalVariable {
         }
 
         this.map.put("assetsPath", "/newclass/assets");
+        this.map.put("commonPath", "/newclass/common");
         this.map.put("rootPath", "/newclass");
         this.map.put("requestPath","http://localhost:8080/newclass");
     }
