@@ -270,11 +270,13 @@ function closePage() {
 
 /*循环菜单*/
 function initMenu(menu,parent){
-	for(var i=0; i<menu.length; i++){   
+	for(var i=0; i<menu.length; i++){
 		var item = menu[i];
 		var str = "";
-		try{
-			if(item.isHeader == "1"){
+		try{if(item.isHeader == "2"){
+
+            }
+			else if(item.isHeader == "1"){
 				str = "<li class='menu-header'>"+item.name+"</li>";
 				$(parent).append(str);
 				if(item.childMenus != ""){
@@ -400,7 +402,8 @@ $(function(){
 					{"id":"3","name":"船舶信息管理","parentId":"1","url":"/newclass/ship/list","icon":"&#xe602;","order":"1","isHeader":"0","childMenus":""},
        				 {"id":"4","name":"事实管理","parentId":"1","url":"home3.html","icon":"&#xe602;","order":"1","isHeader":"0","childMenus":""},
        				 {"id":"5","name":"考核认定","parentId":"1","url":"home4.html","icon":"&#xe602;","order":"1","isHeader":"0","childMenus":""},
-        			{"id":"6","name":"分值管理","parentId":"1","url":"home5.html","icon":"&#xe602;","order":"1","isHeader":"0","childMenus":""}
+        			{"id":"6","name":"分值管理","parentId":"1","url":"home5.html","icon":"&#xe602;","order":"1","isHeader":"0","childMenus":""},
+                    {"id":"7","name":"船舶详细信息","parentId":"1","url":"home5.html","icon":"&#xe602;","order":"1","isHeader":"2","childMenus":""}
 
 				]},
 				];

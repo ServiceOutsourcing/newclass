@@ -27,4 +27,8 @@ public class ShipController {
         return "home2";
     }
 
+    @RequestMapping(value = "/change")
+    public String change(){
+        return "cbxx";
+    }
 }
