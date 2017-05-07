@@ -14,6 +14,7 @@ $(".side-menu").on('click', 'li a', function(e) {
 	else if ((checkElement.is('.menu-item-child')) && (!checkElement.is(':visible'))) {
 	  //获取上级菜单
 	  var parent = $this.parents('ul').first();
+	  alert(parent);
 	  //从父级开始找所有打开的菜单并关闭
 	  var ul = parent.find('ul:visible').slideUp(animationSpeed);
 	  //在父级中移出menu-open标记
@@ -396,7 +397,7 @@ $(function(){
 	/*菜单json*/
 	var menu = [{"id":"1","name":"主菜单","parentId":"0","url":"","icon":"","order":"1","isHeader":"1","childMenus":[
 					{"id":"2","name":"考核标准管理","parentId":"1","url":"home1.html","icon":"&#xe602;","order":"1","isHeader":"0","childMenus":""},
-					{"id":"3","name":"船舶信息管理","parentId":"1","url":"home2.jsp","icon":"&#xe602;","order":"1","isHeader":"0","childMenus":""},
+					{"id":"3","name":"船舶信息管理","parentId":"1","url":"/newclass/home","icon":"&#xe602;","order":"1","isHeader":"0","childMenus":""},
        				 {"id":"4","name":"事实管理","parentId":"1","url":"home3.html","icon":"&#xe602;","order":"1","isHeader":"0","childMenus":""},
        				 {"id":"5","name":"考核认定","parentId":"1","url":"home4.html","icon":"&#xe602;","order":"1","isHeader":"0","childMenus":""},
         			{"id":"6","name":"分值管理","parentId":"1","url":"home5.html","icon":"&#xe602;","order":"1","isHeader":"0","childMenus":""}
