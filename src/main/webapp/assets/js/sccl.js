@@ -397,7 +397,7 @@ $(function(){
 	/*菜单json*/
 	var menu = [{"id":"1","name":"主菜单","parentId":"0","url":"","icon":"","order":"1","isHeader":"1","childMenus":[
 					{"id":"2","name":"考核标准管理","parentId":"1","url":"home1.html","icon":"&#xe602;","order":"1","isHeader":"0","childMenus":""},
-					{"id":"3","name":"船舶信息管理","parentId":"1","url":"/newclass/home","icon":"&#xe602;","order":"1","isHeader":"0","childMenus":""},
+					{"id":"3","name":"船舶信息管理","parentId":"1","url":"/newclass/ship/list","icon":"&#xe602;","order":"1","isHeader":"0","childMenus":""},
        				 {"id":"4","name":"事实管理","parentId":"1","url":"home3.html","icon":"&#xe602;","order":"1","isHeader":"0","childMenus":""},
        				 {"id":"5","name":"考核认定","parentId":"1","url":"home4.html","icon":"&#xe602;","order":"1","isHeader":"0","childMenus":""},
         			{"id":"6","name":"分值管理","parentId":"1","url":"home5.html","icon":"&#xe602;","order":"1","isHeader":"0","childMenus":""}
