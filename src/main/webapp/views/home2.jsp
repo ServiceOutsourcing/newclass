@@ -1,12 +1,5 @@
-<%@ page import="java.util.ArrayList" %>
-<%@ page import="com.newclass.bean.CbJbxxEntity" %><%--
-  Created by IntelliJ IDEA.
-  User: liujiawang
-  Date: 2017/5/1
-  Time: 上午10:30
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -63,28 +56,18 @@
         <td class="one">市</td>
         <td class="one">县</td>
     </tr>
-    <%
-        ArrayList file=(ArrayList)session.getAttribute("file");
-        if(file==null||file.size()==0){
-    %>
-    <s:div align="center"><%="您还没有上传文件！"%></s:div>
-    <%
-    }else{
-        for(int i=file.size()-1;i>=0;i--){
-            CbJbxxEntity ff=(CbJbxxEntity)file.get(i);
-    %>
-    <tr>
-        <td colspan="3"><%=ff.getCmch()%></td>
-        <td ><%=ff.getCjsn()%></td>
-        <td ><%=ff.getCjsi()%></td>
-        <td ><%=ff.getCjxn()%></td>
-        <td colspan="3"><%=ff.getCzhu()%></td>
-        <td >编辑<a href=""></a> 删除<a href=""></a> </td>
-    </tr>
-    <%
-            }
-        }
-    %>
+
+    <c:forEach var="shipEntity" items="${shipEntities}" >
+        <tr>
+            <td colspan="3">${shipEntity.cmch}</td>
+            <td ></td>
+            <td ></td>
+            <td ></td>
+            <td colspan="3"></td>
+            <td >编辑<a href=""></a> 删除<a href=""></a> </td>
+        </tr>
+    </c:forEach>
+
 </table>
 </body>
 </html>
