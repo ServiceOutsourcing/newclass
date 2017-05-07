@@ -401,6 +401,7 @@ $(function(){
        				 {"id":"4","name":"事实管理","parentId":"1","url":"home3.html","icon":"&#xe602;","order":"1","isHeader":"0","childMenus":""},
        				 {"id":"5","name":"考核认定","parentId":"1","url":"home4.html","icon":"&#xe602;","order":"1","isHeader":"0","childMenus":""},
         			{"id":"6","name":"分值管理","parentId":"1","url":"home5.html","icon":"&#xe602;","order":"1","isHeader":"0","childMenus":""}
+
 				]},
 				];
 	initMenu(menu,$(".side-menu"));
