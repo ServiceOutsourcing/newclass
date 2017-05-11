@@ -9,9 +9,9 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="${assetsPath}/css/home.css" id="layout-skin"/>
-    <style type="text/css">
-        #tel{width:300px;height:270px;margin:0 auto;box-shadow:1px 1px 5px #333;-webkit-box-shadow:1px 1px 5px #333;display:none;background-color:#ffffff;position:fixed;top:50%;left:50%;z-index:100000;}
-    </style>
+    <%--<style type="text/css">--%>
+        <%--#tel{width:300px;height:270px;margin:0 auto;box-shadow:1px 1px 5px #333;-webkit-box-shadow:1px 1px 5px #333;display:none;background-color:#ffffff;position:fixed;top:50%;left:50%;z-index:100000;}--%>
+    <%--</style>--%>
 </head>
 <body>
 <div id="DBox">
@@ -20,7 +20,7 @@
         <table width="90%" class="table">
             <tr>
                 <td class="one">船名船号</td>
-                <td class="one"><input type="text" value="" name="cmch" style="border-style:none"></td>git
+                <td class="one"><input type="text" value="" name="cmch" style="border-style:none"></td>
                 <td class="one">船籍</td>
                 <td class="one" colspan="3"><input type="text" value="" name="cj" style="border-style:none"></td>
             </tr>
@@ -97,14 +97,14 @@
                 <td class="one"><input type="text" value="" name="" style="border-style:none"></td>
                 <td class="one"><input type="text" value="" name="dlkl" style="border-style:none"></td>
                 <td class="one"><input type="text" value="" name="sfzh" style="border-style:none"></td>
-                <td class="one"><a href="javascript:;" class="demo">修改口令</a></td>
-                <div id="tel" >
-                    <form action="" method="post">
-                        请输入口令<input type="password" >
-                        请确认口令<input type="password">
-                        <input type="button" value="提交">
-                    </form>
-                </div>
+                <td class="one"><a href="" class="demo">修改口令</a></td>
+                <%--<div id="tel" >--%>
+                    <%--<form action="" method="post">--%>
+                        <%--请输入口令<input type="password" >--%>
+                        <%--请确认口令<input type="password">--%>
+                        <%--<input type="button" value="提交">--%>
+                    <%--</form>--%>
+                <%--</div>--%>
 
             </tr>
         </table>
@@ -119,16 +119,16 @@
         </div>
         <script src="${assetsPath}/js/jquery-3.2.0.min.js"></script>
         <script src="${assetsPath}/js/jquery.hDialog.js"></script>
-        <script>
-            $(function(){
-                var $el = $('.dialog');
-                $el.hDialog();
-                $('.demo').hDialog({
-                    positions: 'top',
-                });
-            });
+        <%--<script>--%>
+            <%--$(function(){--%>
+                <%--var $el = $('.dialog');--%>
+                <%--$el.hDialog();--%>
+                <%--$('.demo').hDialog({--%>
+                    <%--positions: 'top',--%>
+                <%--});--%>
+            <%--});--%>
 
-        </script>
+        <%--</script>--%>
     </form>
 </div><!-- HBox end -->
 </body>
